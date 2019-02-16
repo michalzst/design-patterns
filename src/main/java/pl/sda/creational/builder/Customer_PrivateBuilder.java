@@ -4,7 +4,7 @@ import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 
 import java.time.LocalDate;
 
-public class Customer {
+public class Customer_PrivateBuilder {
     private String name;
     private String lastName;
     private LocalDate birthDate;
@@ -13,7 +13,7 @@ public class Customer {
     private String city;
     private String country;
 
-    private Customer(String name,String lastName){
+    private Customer_PrivateBuilder(String name, String lastName){
         this.name=name;
         this.lastName=lastName;
     }
@@ -47,10 +47,10 @@ public class Customer {
     }
     
     public static class Builder{
-        private Customer customer;
+        private Customer_PrivateBuilder customer;
 
         public Builder(String name, String lastname){
-            customer=new Customer(name,lastname);
+            customer=new Customer_PrivateBuilder(name,lastname);
         }
 
         public Builder bornAt(LocalDate birthDate) {
@@ -79,7 +79,7 @@ public class Customer {
             return this;
         }
         
-        public Customer build() {
+        public Customer_PrivateBuilder build() {
             return customer;
         }
 

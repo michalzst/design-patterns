@@ -1,5 +1,7 @@
 package pl.sda.behavioral.decorator;
 
+import pl.sda.creational.singleton.SingletonLogger;
+
 public class Calculator {
     public int add(int a, int b) {
         return a + b;
@@ -27,4 +29,6 @@ public class Calculator {
     public boolean isOdd(int number) {
         return number % 2 == 1;
     }
+
+
 }

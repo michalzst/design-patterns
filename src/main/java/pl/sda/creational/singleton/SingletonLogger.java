@@ -1,4 +1,12 @@
 package pl.sda.creational.singleton;
 
-public class SingletonLogger {
+public enum SingletonLogger {
+    INSTANCE;
+    public void log(String text){
+        System.out.println(text);
+    }
+
+    public static SingletonLogger getInstance() {
+        return INSTANCE;
+    }
 }
