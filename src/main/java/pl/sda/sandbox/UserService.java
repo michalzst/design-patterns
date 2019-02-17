@@ -2,13 +2,14 @@ package pl.sda.sandbox;
 
 import java.util.Optional;
 
-public class UserService {
+public class UserService implements IUserService {
     private final UserInMemoryDatabase userDatabase;
 
     public UserService(UserInMemoryDatabase userDatabase) {
         this.userDatabase = userDatabase;
     }
 
+    @Override
     public void register(String name, String password, String email, int age, Sex sex) {
         Optional<User> user = userDatabase.getByEmail(email);
 

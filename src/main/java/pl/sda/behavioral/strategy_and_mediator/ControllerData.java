@@ -4,6 +4,7 @@ public class ControllerData {
     private final int xAxis;
     private final int yAxis;
 
+
     public ControllerData(int xAxis, int yAxis) {
         this.xAxis = xAxis;
         this.yAxis = yAxis;
